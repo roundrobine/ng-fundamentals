@@ -1,3 +1,4 @@
+import { ToastrService } from "./common/toastr.service";
 import { EventService } from "./events/shared/event.service";
 import { NavBarComponent } from "./nav/nav.component";
 import { EventThumbnailComponent } from "./events/event-thumbnail.component";
@@ -15,7 +16,7 @@ import { EventsAppComponent } from "./events-app.component";
     EventThumbnailComponent,
     NavBarComponent,
   ],
-  providers: [EventService],
+  providers: [EventService, ToastrService],
   bootstrap: [EventsAppComponent],
 })
 export class AppModule {}

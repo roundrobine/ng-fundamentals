@@ -1,3 +1,4 @@
+import { EventService } from "./events/shared/event.service";
 import { NavBarComponent } from "./nav/nav.component";
 import { EventThumbnailComponent } from "./events/event-thumbnail.component";
 import { EventListComponent } from "./events/events-list.component";
@@ -14,6 +15,7 @@ import { EventsAppComponent } from "./events-app.component";
     EventThumbnailComponent,
     NavBarComponent,
   ],
+  providers: [EventService],
   bootstrap: [EventsAppComponent],
 })
 export class AppModule {}

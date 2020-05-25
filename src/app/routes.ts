@@ -7,7 +7,11 @@ import { Routes } from "@angular/router";
 
 export const routes: Routes = [
   { path: "events", component: EventListComponent },
-  { path: "events/new", component: CreateEventComponent },
+  {
+    path: "events/new",
+    component: CreateEventComponent,
+    canDeactivate: ["canDeactivateCreateEvent"],
+  },
   {
     path: "events/:id",
     component: EventDetailsComponent,

@@ -24,9 +24,5 @@ export const routes: Routes = [
   },
   { path: "", redirectTo: "/events", pathMatch: "full" },
   { path: "404", component: ErrorPageComponent },
-  //{ path: 'path/:routeParam', component: MyComponent },
-  //{ path: 'staticPath', component: ... },
-  //{ path: '**', component: ... },
-  //{ path: 'oldPath', redirectTo: '/staticPath' },
-  //{ path: ..., component: ..., data: { message: 'Custom' }
+  { path: "user", loadChildren: "./user/user.module#UserModule" },
 ];

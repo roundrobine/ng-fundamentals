@@ -1,3 +1,4 @@
+import { AuthService } from "./user/shared/auth.service";
 import { RouterModule } from "@angular/router";
 import { ToastrService } from "./common/toastr.service";
 import { NavBarComponent } from "./nav/nav.component";
@@ -34,6 +35,7 @@ import {
     EventRouteActivator,
     { provide: "canDeactivateCreateEvent", useValue: checkDirtyState },
     EventsListResolver,
+    AuthService,
   ],
   bootstrap: [EventsAppComponent],
 })

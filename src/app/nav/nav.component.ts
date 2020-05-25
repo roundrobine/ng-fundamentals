@@ -5,6 +5,9 @@ import { Component } from "@angular/core";
   templateUrl: "./nav-bar.component.html",
   styles: [
     `
+      li > a.router-link-active {
+        color: #f97924;
+      }
       .nav.navbar-nav {
         font-size: 15px;
       }

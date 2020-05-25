@@ -1,3 +1,4 @@
+import { EventsListResolver } from "./events/events-list-resolver.service";
 import { EventRouteActivator } from "./events/event-details/event-route-activator.service";
 import { RouterModule } from "@angular/router";
 import { ToastrService } from "./common/toastr.service";
@@ -30,6 +31,7 @@ import { ErrorPageComponent } from "./errors/error-page/error-page.component";
     ToastrService,
     EventRouteActivator,
     { provide: "canDeactivateCreateEvent", useValue: checkDirtyState },
+    EventsListResolver,
   ],
   bootstrap: [EventsAppComponent],
 })

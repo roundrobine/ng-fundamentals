@@ -1,3 +1,4 @@
+import { EventsListResolver } from "./events/events-list-resolver.service";
 import { EventRouteActivator } from "./events/event-details/event-route-activator.service";
 import { ErrorPageComponent } from "./errors/error-page/error-page.component";
 import { CreateEventComponent } from "./events/create-event/create-event.component";
@@ -6,7 +7,11 @@ import { EventListComponent } from "./events/events-list.component";
 import { Routes } from "@angular/router";
 
 export const routes: Routes = [
-  { path: "events", component: EventListComponent },
+  {
+    path: "events",
+    component: EventListComponent,
+    resolve: { events: EventsListResolver },
+  },
   {
     path: "events/new",
     component: CreateEventComponent,
